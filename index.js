@@ -55,30 +55,63 @@ const promptUser = () => {
       },
   ]);
 };
+function getBadge(license) {
+    let badge;
+    switch(license) {
+        case 'MIT License':
+            badge = '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+            break;
+        case 'GNU General Public License v3.0':
+            badge = '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
+            break;
+        case 'Apache License 2.0':
+            badge = '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+            break;
+        case 'Mozilla Public License 2.0':
+            badge = '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';
+            break;
+        case 'The Unlicense':
+            badge = '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)';
+            break;
+    }
+    return badge;
+}
 
 const generateREADME = (answers) =>
-  `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">Hi! My name is ${answers.name}</h1>
-    <p class="lead">I am from ${answers.location}.</p>
-    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
-    <ul class="list-group">
-      <li class="list-group-item">My GitHub username is ${answers.github}</li>
-      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-    </ul>
-  </div>
-</div>
-</body>
-</html>`;
+  `# ${answers.title}
+
+  ${getBadge(answers.license)}
+  
+  ## Description
+  ---
+  ${answers.description}
+  
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Questions](#questions)
+  
+  ## Installation
+  ${answers.instalation}
+  
+  ## Usage
+  ${answers.usage}
+  
+  ## License
+  This application is covered under the ${answers.license} license.
+  
+  ---
+  ## Contributing
+  ${answers.contributing}
+  
+  ## Tests
+  ${answers.test}
+  
+  ## Questions
+  My Git hub profile id [here](${answers.github}).
+  I can be reached at ${answers.email} for further questions.`;
 
 // Bonus using writeFileAsync as a promise
 const init = () => {

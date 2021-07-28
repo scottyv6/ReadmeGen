@@ -1,0 +1,25 @@
+{
+  "name": "readmegen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scottyv6/ReadmeGen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scottyv6/ReadmeGen/issues"
+  },
+  "homepage": "https://github.com/scottyv6/ReadmeGen#readme",
+  "keywords": [],
+  "dependencies": {
+    "fs": "0.0.1-security",
+    "inquirer": "^8.1.2",
+    "util": "^0.12.4"
+  }
+}

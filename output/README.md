@@ -1,13 +1,10 @@
 # README Generator
-# Boot Camp Spot Assignment 9
 
   [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
   
   ## Description
   ---
-  This app generates a formatted README file. The users is prompted with a series of questions and the answers are then used to generate the README file. 
-  Click [here](https://drive.google.com/file/d/1yeIZft4KWqIH6g8yTAaheOq6vGF7li1B/view?usp=sharing) for a video showing the application in use. 
-  A sample automatically generated README file can be found [here](./output/README.md).
+  This app generates a formatted README.md file. The users is prompted with a series of questions and the answers are then used to generate the README.md file.
   
   ## Table of Contents
   - [Installation](#installation)

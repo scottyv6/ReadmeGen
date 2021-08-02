@@ -110,13 +110,13 @@ const generateREADME = (answers) =>
   ${answers.test}
   
   ## Questions
-  My Git hub profile id [here](${answers.github}).
-  I can be reached at ${answers.email} for further questions.`;
+  My Git hub profile id [here](https://github.com/${answers.github}).
+  I can be reached at [mailto](mailto:${answers.email}) for further questions.`;
 
 // Bonus using writeFileAsync as a promise
 const init = () => {
   promptUser()
-    .then((answers) => writeFileAsync('README.md', generateREADME(answers)))
+    .then((answers) => writeFileAsync('output/README.md', generateREADME(answers)))
     .then(() => console.log('Successfully wrote to README.md'))
     .catch((err) => console.error(err));
 };
